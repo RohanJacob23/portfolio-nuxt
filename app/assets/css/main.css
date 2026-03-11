@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+@import "locomotive-scroll/dist/locomotive-scroll.css";
+
+@theme static {
+	--ui-color-neutral-50: oklch(98.5% 0 0);
+	--ui-color-neutral-100: oklch(97% 0 0);
+	--ui-color-neutral-200: oklch(92.2% 0 0);
+	--ui-color-neutral-300: oklch(87% 0 0);
+	--ui-color-neutral-400: oklch(70.8% 0 0);
+	--ui-color-neutral-500: oklch(55.6% 0 0);
+	--ui-color-neutral-600: oklch(43.9% 0 0);
+	--ui-color-neutral-700: oklch(37.1% 0 0);
+	--ui-color-neutral-800: oklch(26.9% 0 0);
+	--ui-color-neutral-900: oklch(20.5% 0 0);
+	--ui-color-neutral-950: oklch(14.5% 0 0);
+
+	--ui-color-primary-50: oklch(0.9792 0.0124 54.09);
+	--ui-color-primary-100: oklch(0.9524 0.0296 52.74);
+	--ui-color-primary-200: oklch(0.8996 0.0591 51.46);
+	--ui-color-primary-300: oklch(0.8344 0.1002 49.37);
+	--ui-color-primary-400: oklch(0.7459 0.1452 47.46);
+	--ui-color-primary-500: oklch(0.6989 0.17 45.62);
+	--ui-color-primary-600: oklch(0.6402 0.1771 43.53);
+	--ui-color-primary-700: oklch(0.5487 0.1554 41.08);
+	--ui-color-primary-800: oklch(0.4677 0.1255 39.11);
+	--ui-color-primary-900: oklch(0.4069 0.0985 37.97);
+	--ui-color-primary-950: oklch(0.2653 0.0634 37.17);
+
+	--font-title: "Cormorant Garamond", sans-serif;
+	--font-mono: "Geist Mono", monospace;
+}
+
+:root {
+	--ui-primary: var(--ui-color-primary-600);
+}
+
+.dark {
+	--ui-bg: var(--ui-color-neutral-950);
+	--ui-primary: var(--ui-color-primary-600);
+}
+
+@layer {
+	#hero-bar::before {
+		@apply content-[''] flex-1 md:flex-none md:w-32 h-px bg-linear-to-r from-transparent to-primary rounded-full;
+	}
+}
