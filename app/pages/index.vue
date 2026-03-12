@@ -1,5 +1,5 @@
 <template>
-	<main>
+	<main class="relative bg-default z-10">
 		<Hero />
 		<SeparatorSection />
 		<About />
@@ -9,5 +9,6 @@
 		<Services />
 		<SeparatorSection />
 		<Contact />
+		<SeparatorSection />
 	</main>
 </template>

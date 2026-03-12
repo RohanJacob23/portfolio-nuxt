@@ -24,19 +24,26 @@ const data = {
 
 		<div
 			class="max-w-360 w-full mx-auto grid md:grid-cols-[300px_1fr] content-center gap-8">
-			<div
-				class="md:sticky md:top-16 font-mono divide-y divide-default *:py-4 [&_span]:text-default h-[calc(100%-192px)]">
+			<AnimeBlockReveal
+				animate-on-scroll
+				class="md:sticky md:top-16 font-mono divide-y divide-default *:py-4 h-[calc(100%-192px)]">
 				<div class="text-sm text-muted space-y-1">
 					<p class="text-muted/50 text-xs uppercase">Location</p>
-					<p><span>India</span> · Remote friendly</p>
+					<p>
+						<span class="text-default">India</span> · Remote
+						friendly
+					</p>
 				</div>
 				<div class="text-sm text-muted space-y-1">
 					<p class="text-muted/50 text-xs uppercase">Education</p>
 					<p>
-						<span>MCA</span> — Xavier's Institute of Management and
-						Informatics, Jaipur
+						<span class="text-default">MCA</span> — Xavier's
+						Institute of Management and Informatics, Jaipur
 					</p>
-					<p><span>BCA</span> — St. Xavier's College, Jaipur</p>
+					<p>
+						<span class="text-default">BCA</span> — St. Xavier's
+						College, Jaipur
+					</p>
 				</div>
 				<div class="text-sm text-muted space-y-1">
 					<p class="text-muted/50 text-xs uppercase">Speciality</p>
@@ -48,16 +55,20 @@ const data = {
 					</p>
 					<p>GSAP · Three.js</p>
 				</div>
-			</div>
+			</AnimeBlockReveal>
 
 			<div class="space-y-12">
 				<div class="max-w-3xl space-y-12">
-					<h1 class="text-6xl md:text-8xl font-title">
-						Code that <br />
-						<span class="text-primary italic">feels</span> right.
-					</h1>
+					<AnimeBlockReveal animate-on-scroll>
+						<h1
+							class="text-6xl md:text-8xl font-title leading-[1.2]">
+							Code that <br />
+							<span class="text-primary italic">feels</span>
+							right.
+						</h1>
+					</AnimeBlockReveal>
 
-					<div class="space-y-6">
+					<AnimeBlockReveal animate-on-scroll class="space-y-6">
 						<p
 							class="[&_strong]:text-default text-muted/70 [&_strong]:font-medium font-mono">
 							I'm <strong>Rohan Koshy Jacob</strong> — a fullstack
@@ -79,61 +90,66 @@ const data = {
 							I'm not a designer. But I know what good feels like
 							— and I care enough to get it right.
 						</p>
-					</div>
+					</AnimeBlockReveal>
 				</div>
 
-				<div
-					class="flex flex-col md:flex-row divide-y md:divide-x divide-default border border-default bg-muted/50 w-full max-w-7xl rounded-xl">
-					<div class="flex-1 space-y-4 p-4">
-						<p class="font-mono text-sm text-muted/70 uppercase">
-							frontend
-						</p>
-						<div class="flex flex-wrap gap-1 items-center">
-							<UBadge
-								v-for="(skill, index) in data.frontend"
-								:key="index"
-								color="neutral"
-								variant="subtle"
-								class="rounded-full">
-								{{ skill }}
-							</UBadge>
+				<AnimeBlockReveal animate-on-scroll block
+					><div
+						class="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-default border border-default bg-muted/50 w-full max-w-7xl rounded-xl">
+						<div class="flex-1 space-y-4 p-4">
+							<p
+								class="font-mono text-sm text-muted/70 uppercase">
+								frontend
+							</p>
+							<div class="flex flex-wrap gap-1 items-center">
+								<UBadge
+									v-for="(skill, index) in data.frontend"
+									:key="index"
+									color="neutral"
+									variant="subtle"
+									class="rounded-full">
+									{{ skill }}
+								</UBadge>
+							</div>
+						</div>
+						<div class="flex-1 space-y-4 p-4">
+							<p
+								class="font-mono text-sm text-muted/70 uppercase">
+								backend
+							</p>
+							<div class="flex flex-wrap gap-1 items-center">
+								<UBadge
+									v-for="(skill, index) in data.backend"
+									:key="index"
+									color="neutral"
+									variant="subtle"
+									class="rounded-full">
+									{{ skill }}
+								</UBadge>
+							</div>
+						</div>
+						<div class="flex-1 space-y-4 p-4">
+							<p
+								class="font-mono text-sm text-muted/70 uppercase">
+								creative (learning)
+							</p>
+							<div class="flex flex-wrap gap-1 items-center">
+								<UBadge
+									v-for="(skill, index) in data.creative"
+									:key="index"
+									:color="
+										skill === 'GSAP' || skill === 'Motion'
+											? 'primary'
+											: 'neutral'
+									"
+									variant="subtle"
+									class="rounded-full">
+									{{ skill }}
+								</UBadge>
+							</div>
 						</div>
 					</div>
-					<div class="flex-1 space-y-4 p-4">
-						<p class="font-mono text-sm text-muted/70 uppercase">
-							backend
-						</p>
-						<div class="flex flex-wrap gap-1 items-center">
-							<UBadge
-								v-for="(skill, index) in data.backend"
-								:key="index"
-								color="neutral"
-								variant="subtle"
-								class="rounded-full">
-								{{ skill }}
-							</UBadge>
-						</div>
-					</div>
-					<div class="flex-1 space-y-4 p-4">
-						<p class="font-mono text-sm text-muted/70 uppercase">
-							creative (learning)
-						</p>
-						<div class="flex flex-wrap gap-1 items-center">
-							<UBadge
-								v-for="(skill, index) in data.creative"
-								:key="index"
-								:color="
-									skill === 'GSAP' || skill === 'Motion'
-										? 'primary'
-										: 'neutral'
-								"
-								variant="subtle"
-								class="rounded-full">
-								{{ skill }}
-							</UBadge>
-						</div>
-					</div>
-				</div>
+				</AnimeBlockReveal>
 			</div>
 		</div>
 	</section>

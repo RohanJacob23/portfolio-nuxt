@@ -18,9 +18,12 @@ defineProps<{ projects: Project[] }>();
 			:key="index"
 			class="first:border-t last:border-b border-default">
 			<NuxtLink
+				:to="project.liveLink"
+				target="_blank"
 				external
 				class="group grid grid-cols-[1fr_auto] items-center gap-8 py-8 hover:bg-muted/30 hover:px-4 transition-all ease-in-out duration-200 cursor-pointer">
-				<div
+				<AnimeBlockReveal
+					animate-on-scroll
 					class="flex flex-col md:flex-row md:items-center gap-2 md:gap-8">
 					<div
 						class="text-muted/50 text-4xl font-title group-hover:text-primary transition-colors ease-in-out duration-200">
@@ -41,7 +44,7 @@ defineProps<{ projects: Project[] }>();
 							{{ project.description }}
 						</p>
 					</div>
-				</div>
+				</AnimeBlockReveal>
 				<div>
 					<UButton
 						icon="lucide:arrow-up-right"

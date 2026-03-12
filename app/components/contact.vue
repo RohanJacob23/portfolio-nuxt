@@ -9,20 +9,25 @@
 			HI
 		</div>
 		<div class="relative max-w-360 w-full mx-auto font-mono">
-			<h1
-				class="text-6xl md:text-[8vw] [&_em]:text-primary font-light font-title leading-[1.1] mb-6">
-				Got a project?
-				<br />
-				Let's <em>build</em> <br />
-				something.
-			</h1>
+			<AnimeBlockReveal animate-on-scroll>
+				<h1
+					class="text-6xl md:text-[8vw] [&_em]:text-primary font-light font-title leading-[1.1] mb-6 w-fit">
+					Got a project?
+					<br />
+					Let's <em>build</em> <br />
+					something.
+				</h1>
+			</AnimeBlockReveal>
 
-			<div class="flex flex-wrap gap-4 font-mono">
+			<AnimeBlockReveal
+				animate-on-scroll
+				block
+				class="flex flex-wrap gap-4 font-mono w-fit">
 				<UButton size="xl">rohankoshyjacob@gmail.com</UButton>
 				<UButton size="xl" variant="subtle">Github</UButton>
 				<UButton size="xl" variant="subtle">LinkedIn</UButton>
 				<UButton size="xl" variant="subtle">Twitter</UButton>
-			</div>
+			</AnimeBlockReveal>
 		</div>
 	</section>
 </template>

@@ -1,8 +1,10 @@
 import { gsap } from "gsap";
+import { GSDevTools } from "gsap/GSDevTools";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 import LocomotiveScroll from "locomotive-scroll";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, SplitText, GSDevTools);
 
 export default defineNuxtPlugin((nuxtApp) => {
 	const locomotiveScroll = new LocomotiveScroll({
@@ -23,5 +25,13 @@ export default defineNuxtPlugin((nuxtApp) => {
 		ScrollTrigger.refresh();
 	});
 
-	return { provide: { gsap, ScrollTrigger, locomotiveScroll } };
+	return {
+		provide: {
+			gsap,
+			ScrollTrigger,
+			SplitText,
+			GSDevTools,
+			locomotiveScroll,
+		},
+	};
 });

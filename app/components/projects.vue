@@ -1,20 +1,26 @@
 <template>
 	<section class="grid min-h-dvh py-16 px-8 font-mono">
 		<div class="space-y-12 max-w-360 w-full mx-auto">
-			<h1 class="text-6xl md:text-8xl font-title">Projects</h1>
+			<AnimeBlockReveal animate-on-scroll>
+				<h1 class="text-6xl md:text-8xl font-title w-fit">Projects</h1>
+			</AnimeBlockReveal>
 
 			<div class="space-y-6">
 				<!-- first section -->
-				<h2 class="text-2xl md:text-4xl text-muted">
-					Real/Client Projects
-				</h2>
+				<AnimeBlockReveal animate-on-scroll>
+					<h2 class="text-2xl md:text-4xl text-muted w-fit">
+						Real/Client Projects
+					</h2>
+				</AnimeBlockReveal>
 				<ProjectList :projects="realProjects" />
 			</div>
 			<div class="space-y-6">
 				<!-- second section -->
-				<h2 class="text-2xl md:text-4xl text-muted">
-					Personal Projects
-				</h2>
+				<AnimeBlockReveal animate-on-scroll>
+					<h2 class="text-2xl md:text-4xl text-muted w-fit">
+						Personal Projects
+					</h2>
+				</AnimeBlockReveal>
 				<ProjectList :projects="personalProjects" />
 			</div>
 		</div>

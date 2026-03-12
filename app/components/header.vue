@@ -1,6 +1,6 @@
 <template>
 	<header
-		class="hidden md:block fixed z-10 top-0 left-0 w-full h-16 bg-default">
+		class="hidden md:block fixed z-50 top-0 left-0 w-full h-16 bg-default font-mono">
 		<nav class="flex gap-4 items-center h-full px-8 py-2 text-lg">
 			<div class="font-title italic font-bold [&_span]:text-primary">
 				<span class="mr-2">✦</span> Rohan K<span>.</span> Jacob

@@ -41,7 +41,33 @@
 }
 
 @layer {
-	#hero-bar::before {
-		@apply content-[''] flex-1 md:flex-none md:w-32 h-px bg-linear-to-r from-transparent to-primary rounded-full;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	a,
+	span {
+		@apply selection:bg-primary selection:text-primary-950;
+	}
+	body {
+		@apply antialiased cursor-none;
+	}
+	#hero-bar {
+		--scale: 0;
+		&::before {
+			@apply content-[''] flex-1 md:flex-none md:w-32 h-px bg-linear-to-r from-transparent to-primary rounded-full scale-x-(--scale) origin-left;
+		}
+	}
+	.wrapper {
+		@apply relative overflow-hidden block;
+	}
+	.block {
+		@apply absolute inset-0 z-10 size-full bg-primary -translate-x-[101%];
+	}
+	.block-black {
+		@apply absolute inset-0 size-full bg-black -translate-x-[101%];
 	}
 }
